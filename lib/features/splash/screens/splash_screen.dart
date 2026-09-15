@@ -1,11 +1,9 @@
-import 'package:cf_companion/core/constants/app_colors.dart';
 import 'package:cf_companion/core/constants/app_sizes.dart';
 import 'package:cf_companion/core/styles/text_styles.dart';
 import 'package:cf_companion/features/splash/widgets/app_icon.dart';
 import 'package:cf_companion/features/splash/widgets/splash_progress_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
-import 'package:percent_indicator/circular_percent_indicator.dart';
 
 class SplashScreen extends StatelessWidget {
   const SplashScreen({super.key});
