@@ -66,6 +66,9 @@ dependencies:
   package_info_plus: ^10.2.1
   flutter_launcher_icons: ^0.14.4
   flutter_native_splash: ^2.4.8
+  gap: ^3.0.1
+  google_fonts: ^8.2.1
+  flutter_screenutil: ^5.9.3
 
 dev_dependencies:
   flutter_test:
