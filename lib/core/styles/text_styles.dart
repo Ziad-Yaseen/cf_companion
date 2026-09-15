@@ -131,4 +131,8 @@ class AppTextStyles {
   static TextStyle withColor(TextStyle style, Color color) {
     return style.copyWith(color: color);
   }
+
+  static TextStyle withSize(TextStyle style, double size) {
+    return style.copyWith(fontSize: size);
+  }
 }
