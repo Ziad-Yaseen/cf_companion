@@ -3,8 +3,12 @@ import 'package:cf_companion/core/network/dio_helper.dart';
 import 'package:cf_companion/data/models/rating_change_model.dart';
 
 class UserRatingService {
+  UserRatingService(this._dioHelper);
+
+  final DioHelper _dioHelper;
+
   Future<List<RatingChangeModel>> getUserRating(String handle) async {
-    final result = await DioHelper.getRequest(
+    final result = await _dioHelper.getRequest(
       endPoint: ApiEndpoints.userRating,
       queryParameters: {'handle': handle},
     );
