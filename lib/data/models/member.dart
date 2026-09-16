@@ -1,9 +1,9 @@
 class Member {
   final String handle;
 
-  Member({required this.handle});
+  const Member({required this.handle});
 
-  factory Member.fromJson(Map json) {
+  factory Member.fromJson(Map<String, dynamic> json) {
     return Member(handle: json['handle'] ?? '');
   }
 }

@@ -4,27 +4,26 @@ import 'package:cf_companion/data/models/rank_row.dart';
 
 class ContestResult {
   final ContestModel contest;
-  final List problems;
-  final List rows;
+  final List<ProblemModel> problems;
+  final List<RankRow> rows;
 
-  ContestResult({
+  const ContestResult({
     required this.contest,
     required this.problems,
     required this.rows,
   });
 
-  factory ContestResult.fromJson(Map json) {
+  factory ContestResult.fromJson(Map<String, dynamic> json) {
     return ContestResult(
       contest: ContestModel.fromJson(json['contest'] ?? {}),
-      problems:
-          (json['problems'] as List?)
-              ?.map((e) => ProblemModel.fromJson(e))
+      problems: (json['problems'] as List<dynamic>?)
+              ?.map((e) => ProblemModel.fromJson(e as Map<String, dynamic>))
               .toList() ??
-          [],
-      rows:
-          (json['rows'] as List?)?.map((e) => RankRow.fromJson(e)).toList() ??
-          [],
+          const [],
+      rows: (json['rows'] as List<dynamic>?)
+              ?.map((e) => RankRow.fromJson(e as Map<String, dynamic>))
+              .toList() ??
+          const [],
     );
   }
 }
-

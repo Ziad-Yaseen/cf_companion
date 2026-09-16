@@ -8,9 +8,9 @@ class RankRow {
   final int penalty;
   final int successfulHackCount;
   final int unsuccessfulHackCount;
-  final List problemResults;
+  final List<ProblemResult> problemResults;
 
-  RankRow({
+  const RankRow({
     required this.party,
     required this.rank,
     required this.points,
@@ -20,7 +20,7 @@ class RankRow {
     required this.problemResults,
   });
 
-  factory RankRow.fromJson(Map json) {
+  factory RankRow.fromJson(Map<String, dynamic> json) {
     return RankRow(
       party: Party.fromJson(json['party'] ?? {}),
       rank: json['rank'] ?? 0,
@@ -28,11 +28,10 @@ class RankRow {
       penalty: json['penalty'] ?? 0,
       successfulHackCount: json['successfulHackCount'] ?? 0,
       unsuccessfulHackCount: json['unsuccessfulHackCount'] ?? 0,
-      problemResults:
-          (json['problemResults'] as List?)
-              ?.map((e) => ProblemResult.fromJson(e))
+      problemResults: (json['problemResults'] as List<dynamic>?)
+              ?.map((e) => ProblemResult.fromJson(e as Map<String, dynamic>))
               .toList() ??
-          [],
+          const [],
     );
   }
 }

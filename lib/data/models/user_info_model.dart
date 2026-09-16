@@ -16,7 +16,7 @@ class UserInfoModel {
   final String rank;
   final String maxRank;
 
-  UserInfoModel({
+  const UserInfoModel({
     required this.handle,
     required this.avatar,
     required this.titlePhoto,
@@ -35,22 +35,46 @@ class UserInfoModel {
     required this.maxRank,
   });
 
-  factory UserInfoModel.fromJson(Map json) => UserInfoModel(
-    handle: json["handle"] ?? 'NO_HANDLE',
-    avatar: json["avatar"] ?? "", // Image
-    titlePhoto: json["titlePhoto"] ?? "", // Image
-    lastOnlineTimeSeconds: json["lastOnlineTimeSeconds"] ?? 0,
-    registrationTimeSeconds: json["registrationTimeSeconds"] ?? 0,
-    friendOfCount: json["friendOfCount"] ?? 0,
-    contribution: json["contribution"] ?? 0,
-    firstName: json["firstName"] ?? 'No Name',
-    lastName: json["lastName"] ?? 'No Name',
-    country: json["country"] ?? 'Unknown',
-    city: json["city"] ?? 'Unknown',
-    organization: json["organization"] ?? 'Unknown',
-    rating: json["rating"] ?? 0,
-    maxRating: json["maxRating"] ?? 0,
-    rank: json["rank"] ?? 'Unrated',
-    maxRank: json["maxRank"] ?? 'Unrated',
+  factory UserInfoModel.fromJson(Map<String, dynamic> json) => UserInfoModel(
+    handle: json['handle'] ?? 'NO_HANDLE',
+    avatar: json['avatar'] ?? '',
+    titlePhoto: json['titlePhoto'] ?? '',
+    lastOnlineTimeSeconds: json['lastOnlineTimeSeconds'] ?? 0,
+    registrationTimeSeconds: json['registrationTimeSeconds'] ?? 0,
+    friendOfCount: json['friendOfCount'] ?? 0,
+    contribution: json['contribution'] ?? 0,
+    firstName: json['firstName'] ?? '',
+    lastName: json['lastName'] ?? '',
+    country: json['country'] ?? '',
+    city: json['city'] ?? '',
+    organization: json['organization'] ?? '',
+    rating: json['rating'] ?? 0,
+    maxRating: json['maxRating'] ?? 0,
+    rank: json['rank'] ?? 'Unrated',
+    maxRank: json['maxRank'] ?? 'Unrated',
   );
+
+  // ---------------------------------------------------------------------
+  // Helpers
+  // ---------------------------------------------------------------------
+  DateTime get registrationDate =>
+      DateTime.fromMillisecondsSinceEpoch(registrationTimeSeconds * 1000);
+
+  DateTime get lastOnlineDate =>
+      DateTime.fromMillisecondsSinceEpoch(lastOnlineTimeSeconds * 1000);
+
+  bool get isRated => rating > 0;
+
+  String get displayName {
+    final full = '$firstName $lastName'.trim();
+    return full.isEmpty ? handle : full;
+  }
+
+  bool get hasLocation => city.isNotEmpty || country.isNotEmpty;
+
+  String get locationLabel {
+    if (city.isNotEmpty && country.isNotEmpty) return '$city, $country';
+    if (country.isNotEmpty) return country;
+    return '';
+  }
 }
