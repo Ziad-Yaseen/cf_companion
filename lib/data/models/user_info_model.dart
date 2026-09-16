@@ -77,4 +77,9 @@ class UserInfoModel {
     if (country.isNotEmpty) return country;
     return '';
   }
+
+  @override
+  String toString() {
+    return 'UserInfoModel(handle: $handle, rating: $rating, maxRating: $maxRating, rank: $rank)';
+  }
 }

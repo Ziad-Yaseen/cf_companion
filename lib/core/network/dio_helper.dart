@@ -22,6 +22,7 @@ class DioHelper {
     required String endPoint,
     required Map<String, dynamic> queryParameters,
   }) async {
+    initDio();
     await _applyRateLimit();
 
     try {
