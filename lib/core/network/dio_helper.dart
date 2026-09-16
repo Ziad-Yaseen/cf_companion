@@ -1,4 +1,5 @@
 import 'package:cf_companion/core/network/api_endpoints.dart';
+import 'package:cf_companion/core/network/api_exception.dart';
 import 'package:dio/dio.dart';
 
 class DioHelper {
@@ -17,10 +18,42 @@ class DioHelper {
     );
   }
 
-  static Future<Response<dynamic>> getRequest({
+  static Future<dynamic> getRequest({
     required String endPoint,
     required Map<String, dynamic> queryParameters,
   }) async {
+    await _applyRateLimit();
+
+    try {
+      final response = await dio!.get(
+        endPoint,
+        queryParameters: queryParameters,
+      );
+      return _unwrap(response.data);
+    } on DioException catch (e) {
+      final data = e.response?.data;
+      if (data is Map<String, dynamic> && data['status'] == 'FAILED') {
+        throw ApiException.fromCfComment(data['comment'] ?? 'حصل خطأ');
+      }
+      throw ApiException.network(e.message);
+    } on ApiException {
+      rethrow;
+    } catch (e) {
+      throw ApiException.unknown(e.toString());
+    }
+  }
+
+  static dynamic _unwrap(dynamic data) {
+    if (data is Map<String, dynamic>) {
+      if (data['status'] == 'FAILED') {
+        throw ApiException.fromCfComment(data['comment'] ?? 'حصل خطأ');
+      }
+      return data['result'];
+    }
+    throw ApiException.unknown('شكل الرد من السيرفر غير متوقع');
+  }
+
+  static Future<void> _applyRateLimit() async {
     final now = DateTime.now();
     final nextAvailableTime = _lastRequestTime.add(_rateLimitDuration);
 
@@ -30,18 +63,6 @@ class DioHelper {
       await Future.delayed(waitDuration);
     } else {
       _lastRequestTime = now;
-    }
-    try {
-      Response response = await dio!.get(
-        endPoint,
-        queryParameters: queryParameters,
-      );
-
-      return response;
-    } on DioException catch (e) {
-      throw Exception(e.message ?? 'Server connection error');
-    } catch (e) {
-      throw Exception(e.toString());
     }
   }
 }
