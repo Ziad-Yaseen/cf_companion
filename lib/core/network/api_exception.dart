@@ -6,13 +6,13 @@ class ApiException implements Exception {
 
   factory ApiException.fromCfComment(String comment) {
     if (comment.toLowerCase().contains('call limit')) {
-      return ApiException(
+      return const ApiException(
         'في ضغط على الـ API دلوقتي، هنحاول تاني تلقائيًا',
         ApiExceptionType.rateLimited,
       );
     }
     if (comment.toLowerCase().contains('not found')) {
-      return ApiException(
+      return const ApiException(
         'مش لاقي البيانات دي، تأكد من الـ Handle',
         ApiExceptionType.notFound,
       );

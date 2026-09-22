@@ -1,6 +1,6 @@
 import 'package:cf_companion/core/constants/app_colors.dart';
 import 'package:cf_companion/core/constants/app_sizes.dart';
-import 'package:cf_companion/core/resources/app_icons.dart';
+import 'package:cf_companion/core/resources/app_resources.dart';
 import 'package:flutter/material.dart';
 
 class AppIconContainer extends StatelessWidget {
@@ -23,7 +23,7 @@ class AppIconContainer extends StatelessWidget {
           ),
         ],
       ),
-      child: Image.asset(AppIcons.appIcon, ),
+      child: Image.asset(AppResources.appIcon, ),
     );
   }
 }

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:lucide_icons/lucide_icons.dart';
+import 'package:lucide_icons_flutter/lucide_icons.dart';
 
 class AppIcons {
   AppIcons._();
@@ -24,7 +24,7 @@ class AppIcons {
   static const IconData registeredSince = LucideIcons.calendar;
   static const IconData lastSeen = LucideIcons.clock;
   static const IconData streakFlame = LucideIcons.flame;
-  static const IconData chartDetails = LucideIcons.chevronLeft; // RTL
+  static const IconData chartDetails = LucideIcons.chevronLeft;
 
   // ---------------------------------------------------------------------
   // Problems Screen
@@ -112,5 +112,5 @@ class AppIcons {
   // ---------------------------------------------------------------------
   static const IconData handleInput = LucideIcons.atSign;
   static const IconData onboardingSuccess = LucideIcons.checkCheck;
-  static const IconData forwardArrow = LucideIcons.arrowLeft; // RTL
+  static const IconData forwardArrow = LucideIcons.arrowLeft;
 }

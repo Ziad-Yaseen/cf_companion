@@ -7,10 +7,12 @@ class AppSizes {
   static double height8 = 8.h;
   static double height10 = 10.h;
   static double height15 = 15.h;
+  static double height16 = 16.h;
   static double height20 = 20.h;
   static double height25 = 25.h;
   static double height28 = 28.h;
   static double height30 = 30.h;
+  static double height32 = 32.h;
   static double height35 = 35.h;
   static double height40 = 40.h;
   static double height45 = 45.h;
@@ -71,6 +73,7 @@ class AppSizes {
   static double fontSize36 = 36.sp;
   static double fontSize38 = 38.sp;
   static double fontSize40 = 40.sp;
+  static double fontSize48 = 48.sp;
 
   // Border Radius
   static double borderRadius4 = 4.r;
