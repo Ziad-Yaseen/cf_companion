@@ -1,3 +1,4 @@
+import 'package:cf_companion/core/constants/app_colors.dart';
 import 'package:cf_companion/core/constants/app_sizes.dart';
 import 'package:cf_companion/core/styles/text_styles.dart';
 import 'package:cf_companion/features/onboarding/widgets/person_view.dart';
@@ -63,12 +64,24 @@ class OnboardingScreen extends StatelessWidget {
                 ),
                 Gap(AppSizes.height28),
                 Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 51.5),
-                  child: Text(
-                    'مش عارف الـ Handle بتاعك؟ افتحه من صفحة البروفايل على Codeforces.',
-                    textAlign: TextAlign.center,
-                    textDirection: TextDirection.rtl,
-                    style: AppTextStyles.caption,
+                  padding: const EdgeInsets.symmetric(horizontal: 51.5 - 8),
+                  child: InkWell(
+                    onTap: () {},
+                    borderRadius: BorderRadius.circular(
+                      AppSizes.borderRadius12,
+                    ),
+                    overlayColor: WidgetStatePropertyAll(
+                      AppColors.surface.withValues(alpha: 0.2),
+                    ),
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Text(
+                        'مش عارف الـ Handle بتاعك؟ افتحه من صفحة البروفايل على Codeforces.',
+                        textAlign: TextAlign.center,
+                        textDirection: TextDirection.rtl,
+                        style: AppTextStyles.caption,
+                      ),
+                    ),
                   ),
                 ),
               ],
