@@ -1,5 +1,5 @@
 import 'package:cf_companion/core/network/api_endpoints.dart';
-import 'package:cf_companion/core/network/api_exception.dart';
+import 'package:cf_companion/core/exceptions/api_exception.dart';
 import 'package:cf_companion/core/network/cf_response_parser.dart';
 import 'package:cf_companion/core/network/rate_limiter.dart';
 import 'package:dio/dio.dart';

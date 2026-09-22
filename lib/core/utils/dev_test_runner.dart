@@ -1,6 +1,6 @@
 import 'dart:developer';
 
-import 'package:cf_companion/core/network/api_exception.dart';
+import 'package:cf_companion/core/exceptions/api_exception.dart';
 
 class DevTestRunner {
   DevTestRunner._();

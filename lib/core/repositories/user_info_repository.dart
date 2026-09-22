@@ -1,4 +1,4 @@
-import 'package:cf_companion/core/network/api_exception.dart';
+import 'package:cf_companion/core/exceptions/api_exception.dart';
 import 'package:cf_companion/core/services/user_info_service.dart';
 import 'package:cf_companion/data/models/user_info_model.dart';
 
