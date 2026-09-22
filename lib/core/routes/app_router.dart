@@ -1,4 +1,5 @@
 import 'package:cf_companion/core/routes/route_names.dart';
+import 'package:cf_companion/features/main_layout/main_layout.dart';
 import 'package:cf_companion/features/onboarding/screens/onboarding.dart';
 import 'package:cf_companion/features/splash/screens/splash_screen.dart';
 import 'package:flutter/material.dart';
@@ -27,6 +28,19 @@ class AppRouter {
         pageBuilder: (context, state) => CustomTransitionPage(
           key: state.pageKey,
           child: const OnboardingScreen(),
+          transitionsBuilder: (context, animation, secondaryAnimation, child) {
+            return FadeTransition(opacity: animation, child: child);
+          },
+          transitionDuration: const Duration(milliseconds: 400),
+        ),
+      ),
+
+      GoRoute(
+        path: RouteNames.mainLayout,
+        name: RouteNames.mainLayout,
+        pageBuilder: (context, state) => CustomTransitionPage(
+          key: state.pageKey,
+          child: const MainLayout(),
           transitionsBuilder: (context, animation, secondaryAnimation, child) {
             return FadeTransition(opacity: animation, child: child);
           },

@@ -1,5 +1,6 @@
 import 'package:cf_companion/core/constants/app_sizes.dart';
 import 'package:cf_companion/core/routes/route_names.dart';
+import 'package:cf_companion/core/services/handle_service.dart';
 import 'package:cf_companion/core/styles/text_styles.dart';
 import 'package:cf_companion/features/splash/widgets/app_icon.dart';
 import 'package:cf_companion/features/splash/widgets/splash_progress_indicator.dart';
@@ -17,14 +18,16 @@ class SplashScreen extends StatefulWidget {
 class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
-    navigateToOnboardingScreen();
+    navigateToNextScreen();
     super.initState();
   }
 
-  void navigateToOnboardingScreen() async {
+  final _handleService = HandleService();
+  void navigateToNextScreen() async {
+    final hasHandle = await _handleService.hasHandle();
     await Future.delayed(const Duration(seconds: 2));
     if (mounted) {
-      context.go(RouteNames.onboarding);
+      context.go(hasHandle ? RouteNames.mainLayout : RouteNames.onboarding);
     }
   }
 
