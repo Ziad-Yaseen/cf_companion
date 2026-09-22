@@ -3,39 +3,29 @@ import 'package:flutter/material.dart';
 class AppColors {
   AppColors._();
 
-  // ---------------------------------------------------------------------
   // Backgrounds & Surfaces
-  // ---------------------------------------------------------------------
   static const Color background = Color(0xFF0B0F1A);
   static const Color surface = Color(0xFF141B2D);
   static const Color surfaceElevated = Color(0xFF1C2438);
   static const Color border = Color(0xFF26304A);
   static const Color navBackground = Color(0xFF0F1420);
 
-  // ---------------------------------------------------------------------
   // Brand Colors
-  // ---------------------------------------------------------------------
   static const Color primary = Color(0xFF6366F1); // Indigo-500
   static const Color primaryPressed = Color(0xFF4F46E5); // Indigo-600
   static const Color accent = Color(0xFF22D3EE); // Cyan-400
 
-  // ---------------------------------------------------------------------
   // Status Colors
-  // ---------------------------------------------------------------------
   static const Color success = Color(0xFF22C55E); // Accepted
   static const Color warning = Color(0xFFF59E0B); // Performance warnings
   static const Color error = Color(0xFFEF4444); // Wrong Answer / Destructive
 
-  // ---------------------------------------------------------------------
   // Text Colors
-  // ---------------------------------------------------------------------
   static const Color textPrimary = Color(0xFFF1F5F9);
   static const Color textSecondary = Color(0xFF94A3B8);
   static const Color textDisabled = Color(0xFF64748B);
 
-  // ---------------------------------------------------------------------
   // Codeforces Rank Colors
-  // ---------------------------------------------------------------------
   static const Color rankNewbie = Color(0xFF808080); // < 1200
   static const Color rankPupil = Color(0xFF008000); // 1200-1399
   static const Color rankSpecialist = Color(0xFF03A89E); // 1400-1599
@@ -63,9 +53,7 @@ class AppColors {
     return rankLegendaryGrandmaster;
   }
 
-  // ---------------------------------------------------------------------
   // Verdict Colors (Submissions)
-  // ---------------------------------------------------------------------
   static Color forVerdict(String? verdict) {
     switch (verdict) {
       case 'OK':
@@ -88,9 +76,7 @@ class AppColors {
     }
   }
 
-  // ---------------------------------------------------------------------
   // Gradients
-  // ---------------------------------------------------------------------
   static const LinearGradient primaryGradient = LinearGradient(
     begin: Alignment.topLeft,
     end: Alignment.bottomRight,
@@ -103,9 +89,7 @@ class AppColors {
     colors: [surfaceElevated, surface],
   );
 
-  // ---------------------------------------------------------------------
   // Opacity Helpers
-  // ---------------------------------------------------------------------
   static Color primarySoft = primary.withValues(alpha: 0.15);
   static Color successSoft = success.withValues(alpha: 0.15);
   static Color warningSoft = warning.withValues(alpha: 0.15);
