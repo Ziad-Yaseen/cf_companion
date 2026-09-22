@@ -53,14 +53,14 @@ class OnboardingScreen extends StatelessWidget {
                   ),
                 ),
                 Gap(AppSizes.height8),
-                TextField(
+                const TextField(
                   decoration: InputDecoration(hint: Text('Enter your handle')),
                 ),
                 Gap(AppSizes.height32),
                 ElevatedButton.icon(
                   onPressed: () {},
-                  icon: Icon(Icons.arrow_back_ios),
-                  label: Text('تحقق وابدأ'),
+                  icon: const Icon(Icons.arrow_back_ios),
+                  label: const Text('تحقق وابدأ'),
                 ),
                 Gap(AppSizes.height28),
                 Padding(
