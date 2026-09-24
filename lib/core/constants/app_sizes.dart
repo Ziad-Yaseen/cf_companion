@@ -3,6 +3,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 class AppSizes {
   // Heights
   static double height1 = 1.h;
+  static double height2 = 2.h;
+  static double height4 = 4.h;
   static double height5 = 5.h;
   static double height8 = 8.h;
   static double height10 = 10.h;
@@ -37,6 +39,7 @@ class AppSizes {
   static double width5 = 5.w;
   static double width8 = 8.w;
   static double width10 = 10.w;
+  static double width12 = 12.w;
   static double width15 = 15.w;
   static double width20 = 20.w;
   static double width25 = 25.w;
@@ -64,9 +67,11 @@ class AppSizes {
 
   // Font Sizes
   static double fontSize10 = 10.sp;
+  static double fontSize11 = 11.sp;
   static double fontSize12 = 12.sp;
   static double fontSize13 = 13.sp;
   static double fontSize14 = 14.sp;
+  static double fontSize15 = 15.sp;
   static double fontSize16 = 16.sp;
   static double fontSize18 = 18.sp;
   static double fontSize20 = 20.sp;
@@ -84,6 +89,7 @@ class AppSizes {
 
   // Border Radius
   static double borderRadius4 = 4.r;
+  static double borderRadius6 = 6.r;
   static double borderRadius8 = 8.r;
   static double borderRadius12 = 12.r;
   static double borderRadius14 = 14.r;
@@ -100,6 +106,7 @@ class AppSizes {
   static double iconSize32 = 32.sp;
 
   // Padding
+  static double padding2 = 2.w;
   static double padding4 = 4.w;
   static double padding8 = 8.w;
   static double padding9 = 9.w;
