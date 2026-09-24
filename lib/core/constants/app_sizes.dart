@@ -50,7 +50,9 @@ class AppSizes {
   static double width52 = 52.w;
   static double width55 = 55.w;
   static double width60 = 60.w;
+  static double width64 = 64.w;
   static double width65 = 65.w;
+  static double width68 = 68.w;
   static double width70 = 70.w;
   static double width75 = 75.w;
   static double width80 = 80.w;

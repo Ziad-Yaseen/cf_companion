@@ -21,6 +21,7 @@ class AppIcons {
   static const IconData lastSeen = LucideIcons.clock;
   static const IconData streakFlame = LucideIcons.flame;
   static const IconData chartDetails = LucideIcons.chevronLeft;
+  static const IconData verifiedBadge = LucideIcons.badgeCheck;
 
   // Problems Screen
   static const IconData search = LucideIcons.search;

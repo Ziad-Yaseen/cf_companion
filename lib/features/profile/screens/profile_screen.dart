@@ -1,3 +1,4 @@
+import 'package:cf_companion/features/profile/widgets/verified_profile_widget.dart';
 import 'package:flutter/material.dart';
 
 class ProfileScreen extends StatelessWidget {
@@ -5,6 +6,11 @@ class ProfileScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const SizedBox.expand();
+    return const SizedBox.expand(
+      child: Center(
+        child: VerifiedProfileWidget(
+        ),
+      ),
+    );
   }
 }
