@@ -61,8 +61,10 @@ class OnboardingScreen extends StatelessWidget {
                   hintText: 'Enter Handle',
                   controller: handleController,
                   validator: (value) {
-                    if (handleController.toString().isEmpty)
+                    if (handleController.toString().isEmpty) {
                       return 'Please Enter Handle';
+                    }
+                    return null;
                   },
                 ),
 
