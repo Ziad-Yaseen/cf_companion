@@ -15,11 +15,13 @@ class AppSizes {
   static double height32 = 32.h;
   static double height35 = 35.h;
   static double height40 = 40.h;
+  static double height44 = 44.h;
   static double height45 = 45.h;
   static double height48 = 48.h;
   static double height50 = 50.h;
   static double height55 = 55.h;
   static double height60 = 60.h;
+  static double height64 = 64.h;
   static double height65 = 65.h;
   static double height70 = 70.h;
   static double height75 = 75.h;
@@ -33,6 +35,7 @@ class AppSizes {
   // Widths
   static double width1 = 1.w;
   static double width5 = 5.w;
+  static double width8 = 8.w;
   static double width10 = 10.w;
   static double width15 = 15.w;
   static double width20 = 20.w;
@@ -95,13 +98,14 @@ class AppSizes {
   static double iconSize32 = 32.sp;
 
   // Padding
-  static const double padding4 = 4;
-  static const double padding8 = 8;
-  static double padding9 = 9.r;
-  static const double padding12 = 12;
-  static const double padding16 = 16;
-  static const double padding20 = 20;
-  static const double padding24 = 24;
-  static const double padding28 = 28;
-  static const double padding32 = 32;
+  static double padding4 = 4.w;
+  static double padding8 = 8.w;
+  static double padding9 = 9.w;
+  static double padding10 = 10.w;
+  static double padding12 = 12.w;
+  static double padding16 = 16.w;
+  static double padding20 = 20.w;
+  static double padding24 = 24.w;
+  static double padding28 = 28.w;
+  static double padding32 = 32.w;
 }
