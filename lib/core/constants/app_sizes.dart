@@ -40,9 +40,11 @@ class AppSizes {
   static double width28 = 28.w;
   static double width30 = 30.w;
   static double width35 = 35.w;
+  static double width36 = 36.w;
   static double width40 = 40.w;
   static double width45 = 45.w;
   static double width50 = 50.w;
+  static double width52 = 52.w;
   static double width55 = 55.w;
   static double width60 = 60.w;
   static double width65 = 65.w;
@@ -95,6 +97,7 @@ class AppSizes {
   // Padding
   static const double padding4 = 4;
   static const double padding8 = 8;
+  static double padding9 = 9.r;
   static const double padding12 = 12;
   static const double padding16 = 16;
   static const double padding20 = 20;
