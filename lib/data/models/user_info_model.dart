@@ -78,6 +78,19 @@ class UserInfoModel {
     return '';
   }
 
+  String get rankAbbreviation {
+    if (rank.isEmpty || rank.toLowerCase() == 'unrated') return 'UR';
+
+    String normalizedRank = rank.toLowerCase().replaceAll(
+      'grandmaster',
+      'grand master',
+    );
+
+    return normalizedRank.split(' ').map((word) {
+      return word.isNotEmpty ? word[0].toUpperCase() : '';
+    }).join();
+  }
+
   @override
   String toString() {
     return 'UserInfoModel(handle: $handle, rating: $rating, maxRating: $maxRating, rank: $rank)';
