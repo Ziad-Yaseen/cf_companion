@@ -8,7 +8,9 @@ class AppSizes {
   static double height5 = 5.h;
   static double height8 = 8.h;
   static double height10 = 10.h;
+  static double height12 = 12.h;
   static double height15 = 15.h;
+  static double height15_5 = 15.5.h;
   static double height16 = 16.h;
   static double height20 = 20.h;
   static double height25 = 25.h;
@@ -41,6 +43,7 @@ class AppSizes {
   static double width10 = 10.w;
   static double width12 = 12.w;
   static double width15 = 15.w;
+  static double width16 = 16.w;
   static double width20 = 20.w;
   static double width25 = 25.w;
   static double width28 = 28.w;
@@ -97,6 +100,7 @@ class AppSizes {
   static double borderRadius20 = 20.r;
   static double borderRadius24 = 24.r;
   static double borderRadius28 = 28.r;
+  static double borderRadius9999 = 9999.r;
 
   // Icon Sizes
   static double iconSize16 = 16.sp;
@@ -108,10 +112,12 @@ class AppSizes {
   // Padding
   static double padding2 = 2.w;
   static double padding4 = 4.w;
+  static double padding5 = 5.w;
   static double padding8 = 8.w;
   static double padding9 = 9.w;
   static double padding10 = 10.w;
   static double padding12 = 12.w;
+  static double padding14 = 14.w;
   static double padding16 = 16.w;
   static double padding20 = 20.w;
   static double padding24 = 24.w;

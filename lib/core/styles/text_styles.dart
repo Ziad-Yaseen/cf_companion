@@ -42,9 +42,29 @@ class AppTextStyles {
     height: 1.2,
   );
 
+  static TextStyle get attribute => GoogleFonts.inter(
+    fontSize: AppSizes.fontSize20,
+    fontWeight: FontWeight.w700,
+    color: AppColors.textPrimary,
+  );
+
   static TextStyle get titleRateDetails => GoogleFonts.notoSerif(
     fontSize: AppSizes.fontSize11,
     fontWeight: FontWeight.w700,
+    color: AppColors.textSecondary,
+    height: 1.2,
+  );
+
+  static TextStyle get attributeSecondary => GoogleFonts.cairo(
+    fontSize: AppSizes.fontSize11,
+    fontWeight: FontWeight.w400,
+    color: AppColors.textSecondary,
+    height: 1.2,
+  );
+
+  static TextStyle get attributeSecondary2 => GoogleFonts.cairo(
+    fontSize: AppSizes.fontSize10,
+    fontWeight: FontWeight.w500,
     color: AppColors.textSecondary,
     height: 1.2,
   );

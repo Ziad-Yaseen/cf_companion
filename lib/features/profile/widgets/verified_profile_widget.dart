@@ -66,13 +66,15 @@ class VerifiedProfileWidget extends StatelessWidget {
           Gap(AppSizes.height16),
           const Divider(),
           Gap(AppSizes.height16),
-          const Row(
-            mainAxisAlignment: .spaceEvenly,
-            children: [
-              _RateDetails('max rate', 123),
-              Divider(),
-              _RateDetails('current rate', 1235),
-            ],
+          const IntrinsicHeight(
+            child: Row(
+              mainAxisAlignment: .spaceEvenly,
+              children: [
+                _RateDetails('max rate', 123),
+                VerticalDivider(),
+                _RateDetails('current rate', 1235),
+              ],
+            ),
           ),
         ],
       ),
