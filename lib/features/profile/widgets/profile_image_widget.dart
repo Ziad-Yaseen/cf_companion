@@ -1,3 +1,4 @@
+import 'package:cf_companion/core/components/app_cached_image.dart';
 import 'package:cf_companion/core/constants/app_sizes.dart';
 import 'package:flutter/material.dart';
 
@@ -35,10 +36,12 @@ class ProfileImageWidget extends StatelessWidget {
             offset: const Offset(0, 0),
           ),
         ],
-        image: DecorationImage(
-          image: NetworkImage(imageUrl),
-          fit: BoxFit.cover,
-        ),
+      ),
+      child: AppCachedImage(
+        imageUrl: imageUrl,
+        width: AppSizes.width64 - 4,
+        height: AppSizes.width64 - 4,
+        radius: AppSizes.borderRadius12 - 2,
       ),
     );
 
