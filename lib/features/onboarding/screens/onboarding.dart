@@ -1,5 +1,6 @@
 import 'package:cf_companion/core/components/custom_text_field.dart';
 import 'package:cf_companion/core/constants/app_colors.dart';
+import 'package:cf_companion/core/constants/app_icons.dart';
 import 'package:cf_companion/core/constants/app_sizes.dart';
 import 'package:cf_companion/core/routes/route_names.dart';
 import 'package:cf_companion/core/styles/text_styles.dart';
@@ -59,6 +60,7 @@ class OnboardingScreen extends StatelessWidget {
                 Gap(AppSizes.height8),
                 CustomTextField(
                   hintText: 'Enter Handle',
+                  prefixIcon: const Icon(AppIcons.handleInput),
                   controller: handleController,
                   validator: (value) {
                     if (handleController.toString().isEmpty) {
