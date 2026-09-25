@@ -3,9 +3,7 @@ import 'package:cf_companion/core/network/dio_helper.dart';
 import 'package:cf_companion/data/models/user_info_model.dart';
 
 class UserInfoService {
-  UserInfoService(this._dioHelper);
-
-  final DioHelper _dioHelper;
+  final DioHelper _dioHelper = DioHelper();
 
   Future<List<UserInfoModel>> getUserInfo(String handles) async {
     final result = await _dioHelper.getRequest(
