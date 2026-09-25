@@ -11,6 +11,7 @@ class AppIconContainer extends StatelessWidget {
     return Container(
       width: AppSizes.width96,
       height: AppSizes.height96,
+      clipBehavior: Clip.antiAlias,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(AppSizes.borderRadius24),
         border: Border.all(color: AppColors.border.withValues(alpha: 0.4)),

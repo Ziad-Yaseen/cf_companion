@@ -18,12 +18,12 @@ class SplashScreen extends StatefulWidget {
 class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
-    navigateToNextScreen();
     super.initState();
+    _navigateToNextScreen();
   }
 
   final _handleService = HandleService();
-  void navigateToNextScreen() async {
+  Future<void> _navigateToNextScreen() async {
     final hasHandle = await _handleService.hasHandle();
     await Future.delayed(const Duration(seconds: 2));
     if (mounted) {
@@ -36,7 +36,7 @@ class _SplashScreenState extends State<SplashScreen> {
     return Scaffold(
       body: Center(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: .center,
           children: [
             const Spacer(),
             const AppIconContainer(),
