@@ -64,6 +64,7 @@ dependencies:
   google_fonts: ^8.2.1
   flutter_screenutil: ^5.9.3
   lucide_icons_flutter: ^3.1.20
+  heatmap_calendar_plus: ^2.3.0
 dev_dependencies:
   flutter_test:
     sdk: flutter
