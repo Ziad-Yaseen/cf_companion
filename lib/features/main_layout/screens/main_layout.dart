@@ -2,6 +2,8 @@ import 'package:cf_companion/core/constants/app_icons.dart';
 import 'package:cf_companion/features/contests/screens/contests_screen.dart';
 import 'package:cf_companion/features/hub/screens/hub_screen.dart';
 import 'package:cf_companion/features/main_layout/widgets/app_bottom_nav_bar.dart';
+import 'package:cf_companion/features/main_layout/widgets/main_app_bar.dart';
+import 'package:cf_companion/features/main_layout/widgets/profile_app_bar.dart';
 import 'package:cf_companion/features/problemset/screens/problemset_screen.dart';
 import 'package:cf_companion/features/profile/screens/profile_screen.dart';
 import 'package:cf_companion/features/submissions/screens/submissions_screen.dart';
@@ -29,6 +31,7 @@ class _MainLayoutState extends State<MainLayout> {
   Widget build(BuildContext context) {
     return Scaffold(
       extendBody: true,
+      appBar: MainAppBar(index: _selectedIndex),
       // appBar: MainAppBar(
       //   title: Column(
       //     crossAxisAlignment: CrossAxisAlignment.end,

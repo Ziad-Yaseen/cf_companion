@@ -26,6 +26,7 @@ class MainAppCard extends StatelessWidget {
         horizontal: horizontalContentPadding,
         vertical: verticalContentPadding,
       ),
+      clipBehavior: Clip.antiAlias,
       decoration: BoxDecoration(
         color: color,
         borderRadius: BorderRadius.circular(radius),

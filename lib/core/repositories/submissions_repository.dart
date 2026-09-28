@@ -5,7 +5,7 @@ class SubmissionsRepository {
   final SubmissionsService submissionsService;
   SubmissionsRepository(this.submissionsService);
 
-  Future<List<SubmissionModel>> fetchAllSubmissions(String handle) {
-    return submissionsService.getUserStatus(handle);
+  Future<List<SubmissionModel>> fetchAllSubmissions(String handle) async {
+    return await submissionsService.getUserStatus(handle);
   }
 }

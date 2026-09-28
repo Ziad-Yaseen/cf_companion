@@ -42,6 +42,20 @@ class AppTextStyles {
     height: 1.2,
   );
 
+  static TextStyle get hubProfile => GoogleFonts.cairo(
+    fontSize: AppSizes.fontSize14,
+    fontWeight: FontWeight.w700,
+    color: AppColors.rankGrandmaster,
+    height: 1.2,
+  );
+
+  static TextStyle get numberOfSubs => GoogleFonts.cairo(
+    fontSize: AppSizes.fontSize11,
+    fontWeight: FontWeight.w600,
+    color: AppColors.textDisabled,
+    height: 1.2,
+  );
+
   static TextStyle get attribute => GoogleFonts.inter(
     fontSize: AppSizes.fontSize20,
     fontWeight: FontWeight.w700,
@@ -56,6 +70,13 @@ class AppTextStyles {
   );
 
   static TextStyle get attributeSecondary => GoogleFonts.cairo(
+    fontSize: AppSizes.fontSize11,
+    fontWeight: FontWeight.w400,
+    color: AppColors.textSecondary,
+    height: 1.2,
+  );
+
+  static TextStyle get attributeSecondaryProfile => GoogleFonts.jetBrainsMono(
     fontSize: AppSizes.fontSize11,
     fontWeight: FontWeight.w400,
     color: AppColors.textSecondary,

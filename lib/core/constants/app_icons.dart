@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:lucide_icons_flutter/lucide_icons.dart';
 
@@ -57,6 +58,7 @@ class AppIcons {
 
   // More / Hub Screen
   static const IconData trainingPlans = LucideIcons.bookmark;
+  static const IconData trainingPlansFilled = CupertinoIcons.bookmark_solid;
   static const IconData upsolve = LucideIcons.rotateCcw;
   static const IconData tagAnalyzer = LucideIcons.radar;
   static const IconData compareHandles = LucideIcons.users;

@@ -10,7 +10,7 @@ class AppHeatmapWidget extends StatefulWidget {
   const AppHeatmapWidget({
     super.key,
     required this.handle,
-    this.acceptedOnly = false,
+    this.acceptedOnly = true,
     this.repository,
     this.onDaySelected,
   });
@@ -85,13 +85,15 @@ class _AppHeatmapWidgetState extends State<AppHeatmapWidget> {
       ),
       child: switch (_state) {
         _LoadState.loading => const SizedBox(
-            height: 140,
-            child: Center(
-              child: CircularProgressIndicator(color: AppColors.primary),
-            ),
+          height: 140,
+          child: Center(
+            child: CircularProgressIndicator(color: AppColors.primary),
           ),
-        _LoadState.error =>
-          _ErrorContent(message: _errorMessage, onRetry: _load),
+        ),
+        _LoadState.error => _ErrorContent(
+          message: _errorMessage,
+          onRetry: _load,
+        ),
         _LoadState.loaded => _buildHeatmap(),
       },
     );
