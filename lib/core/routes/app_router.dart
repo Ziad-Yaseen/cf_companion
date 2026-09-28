@@ -2,7 +2,7 @@ import 'package:cf_companion/core/routes/route_names.dart';
 import 'package:cf_companion/features/main_layout/screens/main_layout.dart';
 import 'package:cf_companion/features/onboarding/screens/onboarding.dart';
 import 'package:cf_companion/features/splash/screens/splash_screen.dart';
-import 'package:cf_companion/features/splash/settings_screen.dart';
+import 'package:cf_companion/features/settings/screens/settings_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
