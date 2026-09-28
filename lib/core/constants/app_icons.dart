@@ -1,5 +1,4 @@
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
 import 'package:lucide_icons_flutter/lucide_icons.dart';
 
 class AppIcons {
@@ -22,6 +21,8 @@ class AppIcons {
   static const IconData lastSeen = LucideIcons.clock;
   static const IconData streakFlame = LucideIcons.flame;
   static const IconData chartDetails = LucideIcons.chevronLeft;
+  static const IconData arrowBack = LucideIcons.chevronLeft;
+  static const IconData arrowForward = LucideIcons.chevronRight;
   static const IconData verifiedBadge = LucideIcons.badgeCheck;
 
   // Problems Screen

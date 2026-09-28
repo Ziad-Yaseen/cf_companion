@@ -13,6 +13,7 @@ class AppSizes {
   static double height15_5 = 15.5.h;
   static double height16 = 16.h;
   static double height20 = 20.h;
+  static double height24 = 24.h;
   static double height25 = 25.h;
   static double height28 = 28.h;
   static double height30 = 30.h;
@@ -39,6 +40,7 @@ class AppSizes {
   // Widths
   static double width1 = 1.w;
   static double width5 = 5.w;
+  static double width6 = 6.w;
   static double width8 = 8.w;
   static double width10 = 10.w;
   static double width12 = 12.w;

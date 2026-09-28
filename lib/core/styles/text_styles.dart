@@ -69,6 +69,13 @@ class AppTextStyles {
     height: 1.2,
   );
 
+  static TextStyle get secondarySmallTitleText => GoogleFonts.cairo(
+    fontSize: AppSizes.fontSize12,
+    fontWeight: FontWeight.w700,
+    color: AppColors.textSecondary,
+    height: 1.2,
+  );
+
   static TextStyle get attributeSecondary => GoogleFonts.cairo(
     fontSize: AppSizes.fontSize11,
     fontWeight: FontWeight.w400,
@@ -110,6 +117,13 @@ class AppTextStyles {
     fontSize: AppSizes.fontSize14,
     fontWeight: FontWeight.w600,
     color: AppColors.textPrimary,
+    height: 1.4,
+  );
+
+  static TextStyle get currentHandle => GoogleFonts.cairo(
+    fontSize: AppSizes.fontSize14,
+    fontWeight: FontWeight.w500,
+    color: AppColors.textSecondary,
     height: 1.4,
   );
 
@@ -155,7 +169,7 @@ class AppTextStyles {
   );
 
   static TextStyle get buttonSecondary => GoogleFonts.cairo(
-    fontSize: AppSizes.fontSize15,
+    fontSize: AppSizes.fontSize14,
     fontWeight: FontWeight.w600,
     color: AppColors.primary,
   );

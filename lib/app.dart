@@ -13,6 +13,7 @@ class Delta extends StatelessWidget {
       minTextAdapt: true,
       splitScreenMode: false,
       builder: (context, child) => MaterialApp.router(
+        debugShowCheckedModeBanner: false,
         theme: AppTheme.darkTheme,
         routerConfig: AppRouter.router,
       ),
