@@ -56,6 +56,13 @@ class AppTextStyles {
     height: 1.2,
   );
 
+  static TextStyle get smallText => GoogleFonts.cairo(
+    fontSize: AppSizes.fontSize9,
+    fontWeight: FontWeight.w700,
+    color: AppColors.textSecondary,
+    height: 1.2,
+  );
+
   static TextStyle get attribute => GoogleFonts.inter(
     fontSize: AppSizes.fontSize20,
     fontWeight: FontWeight.w700,
@@ -107,6 +114,13 @@ class AppTextStyles {
   // Section Header
   static TextStyle get sectionHeader => GoogleFonts.cairo(
     fontSize: AppSizes.fontSize16,
+    fontWeight: FontWeight.w500,
+    color: AppColors.textSecondary,
+    letterSpacing: 0.2,
+  );
+
+  static TextStyle get settingSecondary => GoogleFonts.cairo(
+    fontSize: AppSizes.fontSize13,
     fontWeight: FontWeight.w700,
     color: AppColors.textPrimary,
     letterSpacing: 0.2,
@@ -114,6 +128,13 @@ class AppTextStyles {
 
   // Body
   static TextStyle get bodyBold => GoogleFonts.cairo(
+    fontSize: AppSizes.fontSize14,
+    fontWeight: FontWeight.w600,
+    color: AppColors.textPrimary,
+    height: 1.4,
+  );
+
+  static TextStyle get primary14Bold => GoogleFonts.jetBrainsMono(
     fontSize: AppSizes.fontSize14,
     fontWeight: FontWeight.w600,
     color: AppColors.textPrimary,
@@ -128,6 +149,13 @@ class AppTextStyles {
   );
 
   static TextStyle get body => GoogleFonts.cairo(
+    fontSize: AppSizes.fontSize14,
+    fontWeight: FontWeight.w400,
+    color: AppColors.textPrimary,
+    height: 1.4,
+  );
+
+  static TextStyle get settingsBody => GoogleFonts.cairo(
     fontSize: AppSizes.fontSize14,
     fontWeight: FontWeight.w400,
     color: AppColors.textPrimary,
@@ -158,6 +186,12 @@ class AppTextStyles {
   static TextStyle get micro => GoogleFonts.cairo(
     fontSize: AppSizes.fontSize10,
     fontWeight: FontWeight.w500,
+    color: AppColors.textSecondary,
+  );
+
+  static TextStyle get cairoBold13 => GoogleFonts.cairo(
+    fontSize: AppSizes.fontSize13,
+    fontWeight: FontWeight.w700,
     color: AppColors.textSecondary,
   );
 
@@ -196,6 +230,12 @@ class AppTextStyles {
   static TextStyle get ratingSmall => GoogleFonts.cairo(
     fontSize: AppSizes.fontSize16,
     fontWeight: FontWeight.w700,
+  );
+
+  static TextStyle get medium11cairoDisabled => GoogleFonts.cairo(
+    fontSize: AppSizes.fontSize11,
+    fontWeight: FontWeight.w500,
+    color: AppColors.textDisabled,
   );
 
   // Helpers

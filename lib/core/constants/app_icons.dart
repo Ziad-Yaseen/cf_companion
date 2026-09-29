@@ -75,6 +75,8 @@ class AppIcons {
   static const IconData version = LucideIcons.info;
   static const IconData decrement = LucideIcons.minus;
   static const IconData increment = LucideIcons.plus;
+  static const IconData star = LucideIcons.star;
+  static const IconData lock = LucideIcons.lockOpen;
 
   // Dialogs / Generic
   static const IconData delete = LucideIcons.trash2;

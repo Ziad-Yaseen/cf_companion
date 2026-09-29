@@ -9,12 +9,14 @@ class AppSizes {
   static double height8 = 8.h;
   static double height10 = 10.h;
   static double height12 = 12.h;
+  static double height14 = 14.h;
   static double height15 = 15.h;
   static double height15_5 = 15.5.h;
   static double height16 = 16.h;
   static double height20 = 20.h;
   static double height24 = 24.h;
   static double height25 = 25.h;
+  static double height26 = 26.h;
   static double height28 = 28.h;
   static double height30 = 30.h;
   static double height32 = 32.h;
@@ -50,6 +52,8 @@ class AppSizes {
   static double width25 = 25.w;
   static double width28 = 28.w;
   static double width30 = 30.w;
+  static double width32 = 32.w;
+  static double width34 = 34.w;
   static double width35 = 35.w;
   static double width36 = 36.w;
   static double width40 = 40.w;
@@ -71,6 +75,7 @@ class AppSizes {
   static double width100 = 100.w;
 
   // Font Sizes
+  static double fontSize9 = 9.sp;
   static double fontSize10 = 10.sp;
   static double fontSize11 = 11.sp;
   static double fontSize12 = 12.sp;
